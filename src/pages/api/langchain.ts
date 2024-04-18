@@ -12,8 +12,8 @@ export default async function handler(
     const input = req.body.message;
     const llm = new ChatOpenAI({
       modelName: "gpt-3.5-turbo",
-      temperature: 0.9,
-      topP: 1,
+      temperature: 0.2,
+      topP: 2,
     })
     const tools = [
       new BingSerpAPI(
